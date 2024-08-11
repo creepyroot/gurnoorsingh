@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+       /* Body settings */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #D3D3D3; /* Grey background */
+    font-family: 'Poppins', sans-serif; /* Google font */
+}
+
+/* Centering the card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive card */
+.card {
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Updated color scheme: Blue and Magenta */
+.card-front {
+    background-color: #0044cc; /* Blue */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #0044cc;
+    border-radius: 10px;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.card-front p {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-back {
+    background-color: #e20074; /* Magenta */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #e20074;
+    border-radius: 10px;
+    font-size: 18px;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    margin: 5px 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  --s: 140px; /* control the size */
+
+  --_g: #0000 52%, #170409 /* first color */ 54% 57%, #0000 59%;
+  background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0
+      calc(var(--s) / 2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2)
+      0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #67917a; /* second color */
+  background-size: calc(var(--s) / 4.667) var(--s),
+    var(--s) calc(var(--s) / 4.667);
+}
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p>CREEPYROOT</p>
+                </div>
+                <div class="card-back">
+                    <p>creepyroot@proton.me</p>
+                    <p>creepyroot@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
