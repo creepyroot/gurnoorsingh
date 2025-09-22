@@ -330,104 +330,63 @@ span {
     <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
-	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-		webhookUrl: 'https://fiction-assurance-oxford-cincinnati.trycloudflare.com/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat',
-		title: 'Webneeds Assistant',
-		subtitle: 'Always here to help 🌙',
-		initialMessages: [
-			"Hi there! 👋",
-			"My name is Webneeds Assistant. How can I assist you today?"
-		]
-	});
+  createChat({
+    webhookUrl: 'https://fiction-assurance-oxford-cincinnati.trycloudflare.com/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat',
+    title: 'Webneeds Assistant',
+    subtitle: 'Here to help you 24/7',
+    initialMessages: [
+      "Hi there! 👋",
+      "My name is Webneeds Assistant. How can I assist you today?"
+    ],
+    theme: {
+      // Global colors
+      primary: '#ff1a1a',       // Buttons, highlights (red)
+      secondary: '#121212',     // User messages background
+      background: '#0d0d0d',    // Chat background (dark)
+
+      // Header
+      header: {
+        background: '#1a1a1a',
+        color: '#ffffff'
+      },
+
+      // Message bubbles
+      message: {
+        user: {
+          background: '#ff1a1a',   // red for user
+          color: '#ffffff'
+        },
+        bot: {
+          background: '#222222',   // dark grey for bot
+          color: '#f1f1f1'
+        }
+      },
+
+      // Input field
+      input: {
+        background: '#111111',
+        color: '#ffffff',
+        border: '#ff1a1a'
+      },
+
+      // Send button
+      sendButton: {
+        background: '#ff1a1a',
+        color: '#ffffff'
+      },
+
+      // Launcher button
+      launcher: {
+        background: '#1a1a1a',
+        color: '#ffffff'
+      }
+    }
+  });
 </script>
-
-<style>
-	/* Entire chat container */
-	.n8n-chat {
-		background: #121212 !important;
-		color: #eaeaea !important;
-		border: none !important;
-		box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-		border-radius: 12px !important;
-	}
-
-	/* Header */
-	.n8n-chat-header {
-		background: #1f1f1f !important;
-		color: #ffffff !important;
-		font-weight: bold;
-		padding: 12px;
-		border-bottom: 1px solid #2a2a2a !important;
-		border-radius: 12px 12px 0 0 !important;
-	}
-
-	/* Bot messages */
-	.n8n-chat-message--bot {
-		background: #1e1e1e !important;
-		color: #f1f1f1 !important;
-		border: 1px solid #2a2a2a !important;
-		border-radius: 14px 14px 14px 0 !important;
-		padding: 10px 14px;
-	}
-
-	/* User messages */
-	.n8n-chat-message--user {
-		background: #333333 !important;
-		color: #ffffff !important;
-		border-radius: 14px 14px 0 14px !important;
-		padding: 10px 14px;
-	}
-
-	/* Buttons inside chat (quick replies, choices) */
-	.n8n-chat-button-message button {
-		background: #2d2d2d !important;
-		color: #ffffff !important;
-		border: 1px solid #444 !important;
-		border-radius: 6px !important;
-		transition: background 0.3s ease;
-	}
-	.n8n-chat-button-message button:hover {
-		background: #444 !important;
-	}
-
-	/* Input field */
-	.n8n-chat-input {
-		background: #1c1c1c !important;
-		color: #fff !important;
-		border: 1px solid #333 !important;
-		border-radius: 8px !important;
-	}
-	.n8n-chat-input::placeholder {
-		color: #777 !important;
-	}
-
-	/* Send button */
-	.n8n-chat-send-button {
-		background: #333 !important;
-		color: #fff !important;
-		border-radius: 6px !important;
-		border: none !important;
-		transition: background 0.2s ease;
-	}
-	.n8n-chat-send-button:hover {
-		background: #555 !important;
-	}
-
-	/* Launcher button (bottom-right circle) */
-	.n8n-chat-button {
-		background: #1e1e1e !important;
-		color: #fff !important;
-		border: none !important;
-		border-radius: 50% !important;
-		box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-	}
-	.n8n-chat-button:hover {
-		background: #333 !important;
-	}
-</style>
 
 
     <script>
