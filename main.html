@@ -345,9 +345,9 @@ span {
 </script>
 
 <style>
-	/* Outer container (no border, clean floating style) */
+	/* Entire chat container */
 	.n8n-chat {
-		background: #121212 !important; /* deep dark background */
+		background: #121212 !important;
 		color: #eaeaea !important;
 		border: none !important;
 		box-shadow: 0 6px 18px rgba(0,0,0,0.6);
@@ -356,7 +356,7 @@ span {
 
 	/* Header */
 	.n8n-chat-header {
-		background: #1e1e1e !important;
+		background: #1f1f1f !important;
 		color: #ffffff !important;
 		font-weight: bold;
 		padding: 12px;
@@ -375,10 +375,22 @@ span {
 
 	/* User messages */
 	.n8n-chat-message--user {
-		background: #2d2d2d !important;
-		color: #fff !important;
+		background: #333333 !important;
+		color: #ffffff !important;
 		border-radius: 14px 14px 0 14px !important;
 		padding: 10px 14px;
+	}
+
+	/* Buttons inside chat (quick replies, choices) */
+	.n8n-chat-button-message button {
+		background: #2d2d2d !important;
+		color: #ffffff !important;
+		border: 1px solid #444 !important;
+		border-radius: 6px !important;
+		transition: background 0.3s ease;
+	}
+	.n8n-chat-button-message button:hover {
+		background: #444 !important;
 	}
 
 	/* Input field */
@@ -398,13 +410,13 @@ span {
 		color: #fff !important;
 		border-radius: 6px !important;
 		border: none !important;
-		transition: all 0.2s ease;
+		transition: background 0.2s ease;
 	}
 	.n8n-chat-send-button:hover {
 		background: #555 !important;
 	}
 
-	/* Launcher button */
+	/* Launcher button (bottom-right circle) */
 	.n8n-chat-button {
 		background: #1e1e1e !important;
 		color: #fff !important;
