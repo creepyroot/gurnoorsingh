@@ -328,31 +328,78 @@ span {
         </div>
     </section>
     <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-<df-messenger
-  oauth-client-id="INSERT_OAUTH_CLIENT_ID"
-  access-token-name="INSERT_ACCESS_TOKEN_NAME"
-  project-id="linear-aviary-464820-u4"
-  agent-id="e2041655-eac1-4275-9c63-0b73a5ad76c2"
-  language-code="en"
-  max-query-length="-1">
-<df-messenger-chat-bubble
-    chat-title="webneed">
-</df-messenger-chat-bubble>
-</df-messenger>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'http://screenshot-brunette-uri-roman.trycloudflare.com/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat'
+	});
+</script>
+
 <style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans;
-    --df-messenger-chat-background: #f3f6fc;
-    --df-messenger-message-user-background: #d3e3fd;
-    --df-messenger-message-bot-background: #fff;
-    bottom: 16px;
-    right: 16px;
-  }
+	/* Chat launcher button */
+	.n8n-chat-button {
+		background-color: #ff0000 !important; /* Red */
+		color: #fff !important;
+		border: 2px solid #000 !important; /* Black border */
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+	}
+
+	/* Chat container */
+	.n8n-chat {
+		background-color: #111 !important; /* Black background */
+		color: #fff !important;
+		border: 2px solid #ff0000 !important;
+		font-family: "Segoe UI", sans-serif;
+	}
+
+	/* Chat header */
+	.n8n-chat-header {
+		background: linear-gradient(90deg, #ff0000, #990000) !important;
+		color: #fff !important;
+		font-weight: bold;
+		border-bottom: 2px solid #000 !important;
+	}
+
+	/* User message bubbles */
+	.n8n-chat-message--user {
+		background-color: #ff0000 !important;
+		color: #fff !important;
+		border-radius: 12px 12px 0 12px !important;
+	}
+
+	/* Bot message bubbles */
+	.n8n-chat-message--bot {
+		background-color: #222 !important;
+		color: #fff !important;
+		border: 1px solid #ff0000 !important;
+		border-radius: 12px 12px 12px 0 !important;
+	}
+
+	/* Input field */
+	.n8n-chat-input {
+		background-color: #000 !important;
+		color: #fff !important;
+		border: 2px solid #ff0000 !important;
+	}
+
+	.n8n-chat-input::placeholder {
+		color: #aaa !important;
+	}
+
+	/* Send button */
+	.n8n-chat-send-button {
+		background-color: #ff0000 !important;
+		color: #fff !important;
+		border: none !important;
+	}
+
+	.n8n-chat-send-button:hover {
+		background-color: #cc0000 !important;
+	}
 </style>
+
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('nav').classList.toggle('active');
