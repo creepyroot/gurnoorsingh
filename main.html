@@ -377,33 +377,16 @@ span {
     <!-- your loader markup -->
   </div>
 </div>
+<script>
 
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-  // Create chat widget inside your container
-  createChat({
-    webhookUrl: 'https://funeral-journey-metric-sierra.trycloudflare.com/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat',
-    container: '#chat-container'
-  });
-
-  const loader = document.getElementById('chat-loader');
-  const chatContainer = document.getElementById('chat-container');
-
-  // Watch for chat widget to mount, then hide loader smoothly
-  const observer = new MutationObserver(() => {
-    const chatEl = chatContainer.querySelector('.n8n-chat');
-    if (chatEl) {
-      loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 600);
-      observer.disconnect();
-    }
-  });
-
-  observer.observe(chatContainer, { childList: true, subtree: true });
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+ 
+    createChat({
+        webhookUrl: 'https://n8n.unicated.com/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat'
+    });
 </script>
-	<script>
-
 
 
 	
@@ -411,10 +394,7 @@ span {
 
 
  
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-    </script>
+      
 </body>
 </html>
 
